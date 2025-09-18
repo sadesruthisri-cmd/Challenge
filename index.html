@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Agriculture Dashboard</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f8;
+        }
+        header {
+            background-color: #2e8b57;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            width: 200px;
+            height: 100vh;
+            background-color: #3cb371;
+            float: left;
+            padding-top: 20px;
+        }
+        nav ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        nav ul li {
+            padding: 12px 20px;
+            color: white;
+            cursor: pointer;
+        }
+        nav ul li:hover {
+            background-color: #2e8b57;
+        }
+        main {
+            margin-left: 200px;
+            padding: 20px;
+        }
+        .card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Agriculture Monitoring Dashboard</h1>
+        <p>Track crops, weather, and productivity</p>
+    </header>
+    <nav>
+        <ul>
+            <li>Dashboard</li>
+            <li>Crop Health</li>
+            <li>Soil Data</li>
+            <li>Weather</li>
+            <li>Reports</li>
+        </ul>
+    </nav>
+    <main>
+        <div class="card">
+            <h2>Today's Weather</h2>
+            <p>Temperature: 28°C | Humidity: 60% | Rainfall: 10mm</p>
+        </div>
+        <div class="card">
+            <h2>Crop Health Overview</h2>
+            <p>Most crops are healthy. 2 fields need attention.</p>
+        </div>
+        <div class="card">
+            <h2>Soil Moisture Levels</h2>
+            <p>Average Moisture: 45% | Optimal Range: 40%-60%</p>
+        </div>
+    </main>
+    <script>
+        const items = document.querySelectorAll("nav ul li");
+        items.forEach(item => {
+            item.addEventListener("click", () => {
+                alert(`Navigating to ${item.innerText}`);
+            });
+        });
+    </script>
+</body>
+</html>
